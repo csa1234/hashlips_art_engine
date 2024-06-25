@@ -18,7 +18,7 @@ data.forEach((item) => {
   if (network == NETWORK.sol) {
     item.name = `${namePrefix} #${item.edition}`;
     item.description = description;
-    item.creators = solanaMetadata.creators;
+    item.image = `${baseUri}/${item.edition}.png`
   } else {
     item.name = `${namePrefix} #${item.edition}`;
     item.description = description;
@@ -39,7 +39,7 @@ if (network == NETWORK.sol) {
   console.log(`Updated description for images to ===> ${description}`);
   console.log(`Updated name prefix for images to ===> ${namePrefix}`);
   console.log(
-    `Updated creators for images to ===> ${JSON.stringify(
+    `Updated baseUri for images to ===> ${JSON.stringify(
       solanaMetadata.creators
     )}`
   );
